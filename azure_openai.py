@@ -16,7 +16,7 @@ def get_completion_from_messages(system_message, user_message, model="test", tem
         {'role': 'user', 'content': f"{user_message}"}
     ]
     
-    response = openai.ChatCompletion.create(
+    response = client.Completion.create(
         engine=model,
         model=model,
         messages=messages,
