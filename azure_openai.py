@@ -8,7 +8,7 @@ openai.api_type = "azure"
 openai.api_base = "https://firstazureopenai05022024.openai.azure.com/"
 openai.api_version = "2024-02-15-preview"
 openai.api_key = os.getenv("OPENAI_API_KEY") 
-print(os.getenv("OPENAI_API_KEY"))
+
 
 def get_completion_from_messages(system_message, user_message, model="test", temperature=0, max_tokens=500) -> str:
 
