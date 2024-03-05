@@ -18,7 +18,7 @@ def get_completion_from_messages(system_message, user_message, model="test", tem
     
     response = openai.ChatCompletion.create(
         engine=model,
-        #model="test",
+        model=model,
         messages=messages,
         temperature=temperature, 
         max_tokens=max_tokens, 
