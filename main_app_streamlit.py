@@ -18,7 +18,7 @@ conn = sql_db.create_connection()
 # Schema Representation for finances table
 schemas = sql_db.get_schema_representation()
 
-st.title("SQL Query Generator with GPT-4")
+st.title("SQL Query Generator with gpt-35-turbo")
 st.write("Enter your message to generate SQL and view results.")
 
 # Input field for the user to type a message
