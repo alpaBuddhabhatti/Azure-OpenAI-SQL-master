@@ -1,13 +1,13 @@
 #from dotenv import load_dotenv
 import os
-from openai import openai
+from openai import OpenAi
 
 #load_dotenv()
 
-openai.api_type = "azure"
-openai.api_base = "https://firstazureopenai05022024.openai.azure.com/"
-openai.api_version = "2024-02-15-preview"
-openai.api_key ="55457392c21046e8bf4223a6dac91316" # os.getenv("OPENAI_API_KEY") 
+OpenAi.api_type = "azure"
+OpenAi.api_base = "https://firstazureopenai05022024.openai.azure.com/"
+OpenAi.api_version = "2024-02-15-preview"
+OpenAi.api_key ="55457392c21046e8bf4223a6dac91316" # os.getenv("OPENAI_API_KEY") 
 
 def get_completion_from_messages(system_message, user_message, model="test", temperature=0, max_tokens=500) -> str:
 
@@ -15,7 +15,7 @@ def get_completion_from_messages(system_message, user_message, model="test", tem
         {'role': 'system', 'content': system_message},
         {'role': 'user', 'content': f"{user_message}"}
     ]
-    client = openai()
+    client = OpenAi()
     response = client.Completion.create(
         engine=model,
         model=model,
