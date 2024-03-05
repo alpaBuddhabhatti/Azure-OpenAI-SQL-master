@@ -27,9 +27,13 @@ user_message = st.text_input("Enter your message:")
 if user_message:
     # Format the system message with the schema
     formatted_system_message = SYSTEM_MESSAGE.format(schema=schemas['finances'])
+    print("formatted_system_message :", formatted_system_message)
+   
 
-    # Use GPT-4 to generate the SQL query
+    # Use gpt-35-turbo to generate the SQL query
     response = get_completion_from_messages(formatted_system_message, user_message)
+    print("Azure Open AI response: ", response)
+    
     json_response = json.loads(response)
     query = json_response['query']
 
