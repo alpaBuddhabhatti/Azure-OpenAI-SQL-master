@@ -7,7 +7,7 @@ load_dotenv()
 openai.api_type = "azure"
 openai.api_base = "https://firstazureopenai05022024.openai.azure.com/"
 openai.api_version = "2024-02-15-preview"
-openai.api_key ="55457392c21046e8bf4223a6dac91316" # os.getenv("OPENAI_API_KEY") 
+openai.api_key = os.getenv("OPENAI_API_KEY") 
 
 def get_completion_from_messages(system_message, user_message, model="test", temperature=0, max_tokens=500) -> str:
 
